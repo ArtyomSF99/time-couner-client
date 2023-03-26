@@ -21,7 +21,7 @@ const Login = () => {
       if (login && password) {
       }
       const response = await axios.post(
-        "https://work-couner-server.onrender.com/company-worker/login",
+        "https://work-couner-server.onrender.com/api/company-worker/login",
         {
           worker_login: workerLogin,
           worker_password: workerPassword,
@@ -51,7 +51,7 @@ const Login = () => {
         return;
       }
       const response = await axios.post(
-        "https://work-couner-server.onrender.com/company/login",
+        "https://work-couner-server.onrender.com/api/company/login",
         {
           login: login,
           password: password,
