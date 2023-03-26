@@ -14,7 +14,7 @@ const WorkerHome = () => {
   const getWorker = async () => {
 
     const response = await axios.get(
-      `https://worker-couner.onrender.com/company-worker?worker_id=${worker.id}`
+      `https://work-couner-server.onrender.comcompany-worker?worker_id=${worker.id}`
     );
     setIsWorked(response.data.is_worked);
 
@@ -22,7 +22,7 @@ const WorkerHome = () => {
   const startWork = async () => {
     setIsBtnDisabled(true);
     const response = await axios.post(
-      `https://worker-couner.onrender.com/company-workers-start`,
+      `https://work-couner-server.onrender.comcompany-workers-start`,
       {
         worker_id: worker.id,
         start_time: Date.now(),
@@ -34,7 +34,7 @@ const WorkerHome = () => {
   const endWork = async () => {
     setIsBtnDisabled(true);
     const response = await axios.put(
-      `https://worker-couner.onrender.com/company-workers-end`,
+      `https://work-couner-server.onrender.comcompany-workers-end`,
       {
         worker_id: worker.id,
         end_time: Date.now(),

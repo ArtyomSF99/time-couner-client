@@ -17,14 +17,14 @@ export default function WorkerRoles() {
     useState(false);
 
   const deleteRole = async (id) => {
-    await axios.delete(`https://worker-couner.onrender.com/company-roles?role_id=${id}`);
+    await axios.delete(`https://work-couner-server.onrender.comcompany-roles?role_id=${id}`);
   };
   const createRole = async (id) => {
     try {
       if (workerRoleName && workerRoleSalary) {
       }
       const response = await axios.post(
-        "https://worker-couner.onrender.com/company-roles",
+        "https://work-couner-server.onrender.comcompany-roles",
         {
           company_id: company.id,
           role_name: workerRoleName,
@@ -43,7 +43,7 @@ export default function WorkerRoles() {
       if (workerRoleName && workerRoleSalary) {
       }
       const response = await axios.put(
-        "https://worker-couner.onrender.com/company-roles",
+        "https://work-couner-server.onrender.comcompany-roles",
         {
           id: selectedRole.id,
           role_name: workerRoleName,
@@ -59,7 +59,7 @@ export default function WorkerRoles() {
   };
   const getRoles = async () => {
     const response = await axios.get(
-      `https://worker-couner.onrender.com/company-roles?company_id=${company.id}`
+      `https://work-couner-server.onrender.comcompany-roles?company_id=${company.id}`
     );
     setWorkerRoles(response.data);
   };

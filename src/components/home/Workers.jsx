@@ -21,7 +21,7 @@ export default function Workers() {
 
   const deleteWorker = async (id) => {
     await axios.delete(
-      `https://worker-couner.onrender.com/company-workers?worker_id=${id}`
+      `https://work-couner-server.onrender.comcompany-workers?worker_id=${id}`
     );
   };
   const createWorker = async (id) => {
@@ -29,7 +29,7 @@ export default function Workers() {
       if (workerName && workerLastName && workerRoleId) {
       }
       const response = await axios.post(
-        "https://worker-couner.onrender.com/company-workers",
+        "https://work-couner-server.onrender.comcompany-workers",
         {
           company_id: company.id,
           worker_name: workerName,
@@ -51,7 +51,7 @@ export default function Workers() {
       if (workerName && workerLastName) {
       }
       const response = await axios.put(
-        "https://worker-couner.onrender.com/company-roles",
+        "https://work-couner-server.onrender.comcompany-roles",
         {
           id: selectedWorker.id,
           worker_name: workerName,
@@ -67,20 +67,20 @@ export default function Workers() {
   };
   const getWorkers = async () => {
     const response = await axios.get(
-      `https://worker-couner.onrender.com/company-workers?company_id=${company.id}`
+      `https://work-couner-server.onrender.comcompany-workers?company_id=${company.id}`
     );
     setWorkers(response.data);
     // setWorkerRoles(response.data);
   };
   const getRoles = async () => {
     const response = await axios.get(
-      `https://worker-couner.onrender.com/company-roles?company_id=${company.id}`
+      `https://work-couner-server.onrender.comcompany-roles?company_id=${company.id}`
     );
     setWorkerRoles(response.data);
   };
   const getWorkerCode = async (id) => {
     const response = await axios.get(
-      `https://worker-couner.onrender.com/company-worker/code?worker_id=${id}`
+      `https://work-couner-server.onrender.comcompany-worker/code?worker_id=${id}`
     );
     console.log(response.data)
     setWorkerCodeModal(true)

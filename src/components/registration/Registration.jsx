@@ -23,7 +23,7 @@ const Registration = () => {
       if (companyName && adminUsername && login && password) {
       }
       const response = await axios.post(
-        "https://worker-couner.onrender.com/company/regstration",
+        "https://work-couner-server.onrender.comcompany/regstration",
         {
           company_name: companyName,
           admin_username: adminUsername,
@@ -51,7 +51,7 @@ const Registration = () => {
       if (companyName && adminUsername && login && password) {
       }
       const response = await axios.put(
-        "https://worker-couner.onrender.com/company-workers",
+        "https://work-couner-server.onrender.comcompany-workers",
         {
           worker_code: workerCode,
           worker_login: workerLogin,
