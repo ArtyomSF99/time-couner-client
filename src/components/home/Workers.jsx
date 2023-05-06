@@ -184,45 +184,6 @@ export default function Workers() {
           </button>
         </div>
       </MyModal>
-      {/* <MyModal
-        visible={isEditRoleModalVisible}
-        setVisible={setIsEditRoleModalVisible}
-      >
-        <div className={styles.createRoleModla}>
-          Թահմացնել հաստիքի տվյալները
-          <div className={styles.inputContainer}>
-            <label>
-              Հաստիքի անվանումը
-              <input
-                type="text"
-                value={workerRoleName}
-                onChange={(e) => setWorkerRoleName(e.target.value)}
-                required
-              />
-            </label>
-          </div>
-          <div className={styles.inputContainer}>
-            <label>
-              Աշխատավարձը 1ժամի համար
-              <input
-                type="number"
-                value={workerRoleSalary}
-                onChange={(e) => setWorkerRoleSalary(e.target.value)}
-                required
-              />
-            </label>
-          </div>
-          <button
-            className={styles.createBtn}
-            disabled={ workerRoleName.length ===0 || workerRoleSalary.length ===0}
-            onClick={() => {setIsEditRoleModalVisible(false)
-                updateRole()
-            }}
-          >
-            Թարմացնել
-          </button>
-        </div>
-      </MyModal> */}
       <div className={styles.workerRoleItem}>
         <div className={styles.workerRoleNameColumn}>Աշխատող</div>
         <div className={styles.workerRoleSalaryColumn}>Հաստիք</div>

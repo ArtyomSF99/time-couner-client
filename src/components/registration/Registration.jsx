@@ -5,8 +5,8 @@ import { AuthContext, WorkerContext } from "../context";
 import styles from "./registration.module.scss";
 
 const Registration = () => {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
-  const { isWorker, setIsWorker } = useContext(WorkerContext);
+  const { setIsAuth } = useContext(AuthContext);
+  const { setIsWorker } = useContext(WorkerContext);
   const [checked, setChecked] = useState(false);
   const [companyName, setCompanyName] = useState("");
   const [adminUsername, setAdminUsername] = useState("");
@@ -33,8 +33,8 @@ const Registration = () => {
       );
       if (response.status === 200) {
         setIsAuth(true);
-        localStorage.setItem('company', JSON.stringify(response.data));
-        localStorage.setItem('auth', 'true')
+        localStorage.setItem("company", JSON.stringify(response.data));
+        localStorage.setItem("auth", "true");
         navigate("/company-home");
       } else {
         console.log("first");
@@ -61,8 +61,8 @@ const Registration = () => {
       if (response.status === 200) {
         setIsAuth(true);
         setIsWorker(true);
-        localStorage.setItem('worker', JSON.stringify(response.data));
-        localStorage.setItem('auth', 'true')
+        localStorage.setItem("worker", JSON.stringify(response.data));
+        localStorage.setItem("auth", "true");
         navigate("/worker-home");
       } else {
         console.log("first");
@@ -227,15 +227,6 @@ const Registration = () => {
             </div>
           </div>
         )}
-
-        {/* <button
-          onClick={() => {
-            // navigate("/home");
-            alert('hello')
-          }}
-        >
-          test
-        </button> */}
       </div>
     </div>
   );

@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext, WorkerContext } from "../context";
 
 import styles from "./home.module.scss";
 
 const WorkerHome = () => {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
-  const { isWorker, setIsWorker } = useContext(WorkerContext);
+  const {  setIsAuth } = useContext(AuthContext);
+  const {  setIsWorker } = useContext(WorkerContext);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
   const [isWorked, setIsWorked] = useState(false);
   const worker = JSON.parse(localStorage.getItem("worker"));
