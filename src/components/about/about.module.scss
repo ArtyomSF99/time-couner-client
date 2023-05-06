@@ -15,6 +15,9 @@
         padding: 1em;
         font-weight: 900;
         font-size: 2.5em;
+        @media screen and (max-width:1200px) {
+            font-size: 2em;
+        }
     }
     .description{
         width: 80%;
@@ -22,11 +25,17 @@
         padding: 1em;
         font-weight: 500;
         font-size: 2em;
+        @media screen and (max-width:1200px) {
+            font-size: 1.6em;
+        }
     }
     .title{
         width: 60%;
         text-align: center;
         font-size: 2.5em;
+        @media screen and (max-width:1200px) {
+            font-size: 2em;
+        }
     }
     .button{
         margin-top: 3em;
@@ -41,6 +50,9 @@
         &:hover {
           transform: scale(1.2);
         }
+        @media screen and (max-width:1200px) {
+            font-size: 1.6em;
+        }
     }
     .infoBox{
         position: absolute;
@@ -49,5 +61,35 @@
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .aboutContainer {
+        .header{
+            word-wrap: break-word;
+            font-size: 1.6em;
+       
+        }
+        .description{
+    
+            font-size: 1.2em;
+     
+        }
+        .title{
+        
+            font-size: 1.5em;
+        
+        }
+        .button{
+            margin-top: 1.5em;
+           
+            font-size: 1.2em;
+           
+        }
+        .infoBox{
+
+            font-size: 1.2em;
+        }
     }
 }
